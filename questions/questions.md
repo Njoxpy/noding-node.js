@@ -5,7 +5,26 @@ Sure! Here are some sample questions that can help you practice and solidify you
 1. **Basic Usage**
 
    - Write a script using `setTimeout` to log "Hello, World!" to the console after 5 seconds.
+
+   ```js
+   setTimeout(() => {
+      console.log("Hello, world!")
+   }, 5000)
+   ```
    - Create a simple countdown timer using `setInterval` that counts down from 10 to 0, logging each number to the console.
+
+```js
+let number = 11;
+const interval = setInterval(() => {
+  number -= 1;
+  console.log(number);
+  if (number === 0) {
+    clearInterval(interval);
+    console.log("interval cleared");
+  }
+});
+
+```
 
 2. **Practical Applications**
    - Implement a function that fetches data from an API every 15 seconds using `setInterval`.

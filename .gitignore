@@ -1,1 +1,23 @@
 30daysofnode-master/
+windows.md
+shortcuts.md
+tackle.md
+
+# ignore assets folder
+assets/
+
+# ignore blog folder
+blog/
+
+# day
+day 1
+
+src/
+
+# files
+file.js
+
+# dynamic hub
+dynamic-hub
+
+dynamic-hub/

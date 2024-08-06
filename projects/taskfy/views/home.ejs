@@ -5,7 +5,7 @@
   <body>
     <%- include("./partials/navbar.ejs") %>
     <section>
-      <a href="/create">Create blog</a>
+      <a href="/create" class="create">Create blog</a>
     </section>
     <section>
       <% if (blogs.length> 0) { %> <% blogs.forEach(blog=> { %>

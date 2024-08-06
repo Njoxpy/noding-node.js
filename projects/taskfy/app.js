@@ -20,6 +20,16 @@ app.listen(PORT, () => {
   console.log(`listening at port: ${PORT} http://localhost:3000`);
 });
 
+app.use((req, res, next) => {
+  console.log("new request made");
+  console.log(`host: ${req.hostname}`);
+  console.log(`request path: ${req.path}`);
+  console.log(`request method: ${req.method}`);
+  console.log("time: ", Date.now());
+  
+  next();
+})
+
 // home page
 app.get("/", (req, res) => {
   const blogs = [

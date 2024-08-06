@@ -1,42 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+<%- include("./partials/head.ejs") %>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>home | <%= title %>
-    </title>
-    <style>
-        body {
-            font-family: Roboto;
-        }
-    </style>
-</head>
-
-<body>
-    <header>
-        <!-- variables -->
-        <% let name="Njox" %>
-
-            <h3>Homepage</h3>
-            <p>
-                <%= name %>
-            </p>
-            <!-- so there is no syntax highliting tool for the js what the fuck is going on here DAMN! -->
-            <nav>
-                <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/search">Search</a></li>
-                    <li><a href="/about">About</a></li>
-                    <li><a href="/player">player</a></li>
-                </ul>
-            </nav>
-    </header>
-    <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque itaque necessitatibus corporis eum neque quam
-        assumenda, debitis tempora esse veritatis doloribus et veniam nihil in. Consectetur voluptatibus illo quidem
-        voluptatum.
-    </p>
-</body>
+  <body>
+    <%- include("./partials/navbar.ejs") %>
+    <section>
+      <a href="/create">Create blog</a>
+    </section>
+    <section>
+      <% if (blogs.length> 0) { %> <% blogs.forEach(blog=> { %>
+          <h3>
+            <%= blog.name %>
+          </h3>
+          <p>
+            <%= blog.snippet %>
+          </p>
+          <% }) %>
+            <% } %>
+    </section>
+    <%- include("./partials/footer.ejs") %>
+  </body>
 
 </html>

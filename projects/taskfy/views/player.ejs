@@ -1,51 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>player
-    </title>
-    <style>
-        body {
-            font-family: Roboto;
-            background-color: red;
-            color: white;
-        }
+<%- include("./partials/head.ejs") %>
 
-        a {
-            color: white;
-        }
-    </style>
-</head>
-
-<body>
-    <header>
-        <h3>about page</h3>
-        <nav>
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/">Search</a></li>
-                <li><a href="/about">About</a></li>
-                <li><a href="/player">player</a></li>
-            </ul>
-        </nav>
-    </header>
-    <div>
-        <h1>Name: Débora Fernandes Mavambo</h1>
-        <img src="../assets/debora.jpg" alt="">
+    <body>
         <div>
-            <p>Born/Age: Born/Age2000-02-17(24 -yrs-old)Country of BirthAngola Angola</p>
-            <p><strong>Nationality:</strong>Congo</p>
-            <p><strong>Dual Nationality:</strong>Aangola</p>
-            <p><strong>Position:</strong>Midfielder</p>
-            <p><strong>Caps:</strong>Youth Caps</p>
-            <p><strong>Preferred foot:</strong>Right</p>
-            <p><strong>height:</strong>177 cm</p>
-            <p><strong>status:</strong>active</p>
-            <p><strong>Current Club:</strong>Simba</p>
+            <h1>Name: Débora Fernandes Mavambo</h1>
+            <img src="../assets/debora.jpg" alt="">
+            <div>
+                <p>Born/Age: Born/Age2000-02-17(24 -yrs-old)Country of BirthAngola Angola</p>
+                <p><strong>Nationality:</strong>Congo</p>
+                <p><strong>Dual Nationality:</strong>Aangola</p>
+                <p><strong>Position:</strong>Midfielder</p>
+                <p><strong>Caps:</strong>Youth Caps</p>
+                <p><strong>Preferred foot:</strong>Right</p>
+                <p><strong>height:</strong>177 cm</p>
+                <p><strong>status:</strong>active</p>
+                <p><strong>Current Club:</strong>Simba</p>
+            </div>
         </div>
-    </div>
-</body>
+        <%- include("./partials/footer.ejs") %>
+    </body>
 
 </html>

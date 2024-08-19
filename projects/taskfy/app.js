@@ -6,11 +6,15 @@ import fs from "fs"
 
 const express = require("express");
 const fs = require("fs");
+const mongoose = require("mongoose")
 
 // create nstance of express app
 const app = express();
 const PORT = process.env.PORT || 3000;
+const DBURI = "mongodb+srv://godblessnyagawa:<ruGe56sGHJyBngbs>@cluster0.8tybcem.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+const connect = mongoose.connect(DBURI)
 // const PORT = process.env.TZ
+
 
 // register view engine.
 app.set("view engine", "ejs");
@@ -30,6 +34,11 @@ app.use((req, res, next) => {
   next();
 })
 
+app.use((req, res, next) => {
+  console.log("to the next middleware");
+
+  next();
+})
 // home page
 app.get("/", (req, res) => {
   const blogs = [

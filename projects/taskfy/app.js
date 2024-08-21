@@ -11,8 +11,7 @@ const mongoose = require("mongoose")
 // create nstance of express app
 const app = express();
 const PORT = process.env.PORT || 3000;
-const DBURI = "mongodb+srv://godblessnyagawa:<ruGe56sGHJyBngbs>@cluster0.8tybcem.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
-const connect = mongoose.connect(DBURI)
+
 // const PORT = process.env.TZ
 
 

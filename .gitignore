@@ -23,3 +23,5 @@ dynamic-hub
 dynamic-hub/
 
 node_modules
+
+.env

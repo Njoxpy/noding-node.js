@@ -1,18 +1,16 @@
-// import modules
-/*
-import express from "express"
-import fs from "fs" 
-*/
-
 const express = require("express");
 const fs = require("fs");
 const mongoose = require("mongoose")
 
+
 // create nstance of express app
 const app = express();
 const PORT = process.env.PORT || 3000;
-
-// const PORT = process.env.TZ
+const DB_URL = "mongodb+srv://node-tuts.vzdgb.mongodb.net/?authSource=%24external&authMechanism=MONGODB-X509&retryWrites=true&w=majority&appName=node-tuts";
+mongoose.connect(DB_URL, {
+    useNewUrlParser: true, 
+    useUnifiedTopology: true
+});
 
 
 // register view engine.
@@ -23,15 +21,6 @@ app.listen(PORT, () => {
   console.log(`listening at port: ${PORT} http://localhost:3000`);
 });
 
-app.use((req, res, next) => {
-  console.log("new request made");
-  console.log(`host: ${req.hostname}`);
-  console.log(`request path: ${req.path}`);
-  console.log(`request method: ${req.method}`);
-  console.log("time: ", Date.now());
-  
-  next();
-})
 
 app.use((req, res, next) => {
   console.log("to the next middleware");

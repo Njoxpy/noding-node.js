@@ -1,11 +1,8 @@
 {
-  "name": "node",
+  "name": "taskfy",
   "version": "1.0.0",
-  "description": "🟢 **Node.js** 🟢",
-  "main": "file.js",
-  "directories": {
-    "doc": "docs"
-  },
+  "description": "",
+  "main": "app.js",
   "scripts": {
     "dev": "nodemon app.js"
   },
@@ -13,13 +10,13 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "bcryptjs": "^2.4.3",
-    "ejs": "^3.1.10",
     "express": "^4.19.2",
-    "jsonwebtoken": "^9.0.2",
-    "lodash": "^4.17.21",
     "mongodb": "^6.8.0",
     "mongoose": "^8.6.1",
+    "bcryptjs": "^2.4.3",
+    "ejs": "^3.1.10",
+    "jsonwebtoken": "^9.0.2",
+    "lodash": "^4.17.21",
     "morgan": "^1.10.0"
   },
   "devDependencies": {
